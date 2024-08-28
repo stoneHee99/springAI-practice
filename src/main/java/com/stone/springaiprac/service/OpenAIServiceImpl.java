@@ -1,5 +1,7 @@
 package com.stone.springaiprac.service;
 
+import com.stone.springaiprac.model.Answer;
+import com.stone.springaiprac.model.Question;
 import lombok.RequiredArgsConstructor;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.stereotype.Service;
@@ -16,5 +18,11 @@ public class OpenAIServiceImpl implements OpenAIService{
                 .user(question)
                 .call()
                 .content();
+    }
+
+    @Override
+    public Answer getAnswer(Question question) {
+        String answerContent = getAnswer(question.question());
+        return new Answer(answerContent);
     }
 }
