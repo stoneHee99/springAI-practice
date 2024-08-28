@@ -2,6 +2,7 @@ package com.stone.springaiprac.controller;
 
 import com.stone.springaiprac.model.Answer;
 import com.stone.springaiprac.model.GetCapitalRequest;
+import com.stone.springaiprac.model.GetCapitalResponse;
 import com.stone.springaiprac.model.Question;
 import com.stone.springaiprac.service.OpenAIService;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +22,7 @@ public class QuestionController {
     }
 
     @PostMapping("/capital")
-    public Answer getCapital(@RequestBody GetCapitalRequest request) {
+    public GetCapitalResponse getCapital(@RequestBody GetCapitalRequest request) {
         return openAIService.getCapital(request);
     }
 }
