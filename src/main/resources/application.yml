@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-ai-prac
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB

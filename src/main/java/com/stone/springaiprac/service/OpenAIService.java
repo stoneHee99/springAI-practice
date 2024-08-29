@@ -1,9 +1,7 @@
 package com.stone.springaiprac.service;
 
-import com.stone.springaiprac.model.Answer;
-import com.stone.springaiprac.model.GetCapitalRequest;
-import com.stone.springaiprac.model.GetCapitalResponse;
-import com.stone.springaiprac.model.Question;
+import com.stone.springaiprac.model.*;
+import org.springframework.web.multipart.MultipartFile;
 
 public interface OpenAIService {
 
@@ -12,4 +10,6 @@ public interface OpenAIService {
     Answer getAnswer(Question question);
 
     GetCapitalResponse getCapital(GetCapitalRequest request);
+
+    SummarizeResponse summarize(SummarizeRequest request, MultipartFile file);
 }
