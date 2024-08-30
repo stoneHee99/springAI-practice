@@ -16,7 +16,6 @@ public class AIConfiguration {
     @Bean
     public ChatClient chatClient(ChatClient.Builder builder) {
         return builder
-                .defaultSystem("You are a helpful assistant.")
                 .build();
     }
 
